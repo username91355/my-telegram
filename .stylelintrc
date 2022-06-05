@@ -1,0 +1,44 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "declaration-empty-line-before": null,
+    "color-hex-case": "upper",
+    "order/order": [
+      "custom-properties"
+    ],
+    "order/properties-order": [
+      [
+        {
+          "groupName": "size",
+          "noEmptyLineBetween": true,
+          "emptyLineBefore": "always",
+          "properties": [
+            "width",
+            "height",
+            "margin",
+            "padding"
+          ]
+        },
+        {
+          "groupName": "font",
+          "noEmptyLineBetween": true,
+          "emptyLineBefore": "always",
+          "properties": [
+            "font-size",
+            "font-weight",
+            "letter-spacing",
+            "color"
+          ]
+        }
+      ],
+      {
+        "unspecified": "bottom",
+        "emptyLineBeforeUnspecified": "threshold",
+        "emptyLineMinimumPropertyThreshold": 0
+      }
+    ]
+  }
+}
